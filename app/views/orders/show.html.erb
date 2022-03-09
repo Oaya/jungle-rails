@@ -23,7 +23,7 @@
      
       <tbody>
          <% @order.line_items.each do | item | %>
-              <%= render 'line_items', item: item, quantity: item[:quantity].to_i %>
+            <%= render 'line_items', item: item, quantity: item[:quantity].to_i %>
          <% end %> 
       </tbody>
       <tfoot>
