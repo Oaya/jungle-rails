@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     user = User.new(user_params)
 
     if user.save
-      sessoion[:user_id] = user.id
+      session[:user_id] = user.id
       redirect_to '/'
     else
       redirect_to '/signup'
@@ -17,12 +17,12 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).parmit(
+    params.require(:user).permit(
       :name,
       :email,
       :password,
       :password_confirmation
     )
   end
-  
+
 end
