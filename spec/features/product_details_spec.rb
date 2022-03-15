@@ -1,5 +1,32 @@
 require 'rails_helper'
 
-RSpec.feature "ProductDetails", type: :feature do
-  pending "add some scenarios (or delete) #{__FILE__}"
+RSpec.feature "Product Details", type: :feature, js: true do
+
+  # SETUP
+  before :each do
+    @category = Category.create! name: 'Apparel'
+
+    
+      @category.products.create!(
+        name:  Faker::Hipster.sentence(3),
+        description: Faker::Hipster.paragraph(4),
+        image: open_asset('apparel1.jpg'),
+        quantity: 10,
+        price: 64.99
+      )
+ 
+  end
+
+   scenario "Navigate to product details page" do
+    #ACT
+    visit root_path
+    
+    find_link('Details').click
+
+    #VERIFY
+    expect(page).to have_content 'Description'
+
+     # DEBUG
+     save_screenshot
+  end
 end
