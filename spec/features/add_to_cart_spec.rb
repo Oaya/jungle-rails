@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "Product Details", type: :feature, js: true do
-
+RSpec.feature "AddToCarts", type: :feature, js: true do
+  
   # SETUP
   before :each do
     @category = Category.create! name: 'Apparel'
@@ -17,16 +17,18 @@ RSpec.feature "Product Details", type: :feature, js: true do
  
   end
 
-   scenario "Navigate to product details page" do
+  scenario "Add tp carts button change the number of nav 'My Cart'number" do
     #ACT
     visit root_path
-    
-    find_link('Details').click
+    expect(page).to have_content('My Cart (0)')
+ 
+    find_button('Add').click
 
-    #VERIFY
-    expect(page).to have_content 'Description'
+    # #VERIFY
+    expect(page).to have_content('My Cart (1)')
 
-     # DEBUG
-    #  save_screenshot
+      #DEBUG
+    # save_screenshot
+    # puts page.html 
   end
 end
