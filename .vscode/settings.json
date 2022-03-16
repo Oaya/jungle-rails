@@ -1,3 +1,7 @@
 {
-  "cSpell.enableFiletypes": ["gemfile", "ruby"]
+  "cSpell.enableFiletypes": [
+    "erb",
+    "gemfile",
+    "ruby"
+  ]
 }
