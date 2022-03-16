@@ -4,7 +4,8 @@ RSpec.describe User, type: :model do
   describe 'Validations' do
     it 'should create valid user' do
       user = User.create(
-        name: "testName",
+        first_name: "test",
+        last_name: "Test",
         email: "test@test.com",
         password: "123456",
         password_confirmation: "123456"
@@ -14,7 +15,8 @@ RSpec.describe User, type: :model do
 
     it 'password and password_confirmation should be matched' do
       user = User.create(
-        name: "testName",
+        first_name: "test",
+        last_name: "Test",
         email: "test@test.com",
         password: "123123",
         password_confirmation: "123456"
@@ -24,14 +26,16 @@ RSpec.describe User, type: :model do
 
     it 'email must be unique' do
       user1 = User.create(
-        name: "testName",
+        first_name: "test",
+        last_name: "Test",
         email: "test@test.com",
         password: "123123",
         password_confirmation: "123123"
         )
 
       user2 = User.create(
-        name: "testName",
+        first_name: "test",
+        last_name: "Test",
         email: "TEST@TEST.com",
         password: "456456",
         password_confirmation: "456456"
@@ -42,7 +46,8 @@ RSpec.describe User, type: :model do
     it 'user password has to be longer than 6 words' do
 
       user = User.create(
-        name: "testName",
+        first_name: "test",
+        last_name: "Test",
         email: "TEST@TEST.com",
         password: "123456",
       
@@ -54,7 +59,8 @@ RSpec.describe User, type: :model do
   describe '.authenticate_with_credentials' do
     it 'should authenticated with spaces for email' do
       user = User.create(
-        name: "testName",
+        first_name: "test",
+        last_name: "Test",
         email: "test@test.com",
         password: "123456",
         password_confirmation: "123456"
@@ -65,7 +71,8 @@ RSpec.describe User, type: :model do
 
     it 'should authenticated with wrong case for email' do
       user = User.create(
-        name: "testName",
+        first_name: "test",
+        last_name: "Test",
         email: "test@test.com",
         password: "123456",
         password_confirmation: "123456"
@@ -74,7 +81,4 @@ RSpec.describe User, type: :model do
       expect(user.id).to be(user1.id)
     end
   end
-
-
-  
 end
