@@ -33,7 +33,7 @@
       
          <% if current_user %>
          <span class="navbar-text">
-            Signed in as <%= current_user.name %> 
+            Signed in as <%= current_user.first_name %> 
          </span> 
             <li>
               <%= link_to "Logout", '/logout' %>
