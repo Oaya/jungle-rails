@@ -7,11 +7,11 @@ Tested application using [RSpec](https://rspec.info/) and [Capybara](https://git
 
 ### Purchasing products
 
-![](https://github.com/Oaya/jungle-rails/blob/master/docs/purchse.gif?raw=true)
+![purchase](https://user-images.githubusercontent.com/74119671/158701739-4ab11fb5-fafe-4150-b8d6-7308f509def9.gif)
 
 ### Product details
 
-![](https://user-images.githubusercontent.com/74119671/158700526-05c212af-0386-43d1-b3a0-836fad07fec9.mp4)
+![detail](https://user-images.githubusercontent.com/74119671/158700729-70f6d093-a1fc-4f4a-bbd9-a512f36df1b3.gif)
 
 ### Sign-up page
 
