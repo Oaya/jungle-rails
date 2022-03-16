@@ -11,7 +11,7 @@ Tested application using [RSpec](https://rspec.info/) and [Capybara](https://git
 
 ### Product details
 
-![]()
+![](https://user-images.githubusercontent.com/74119671/158699344-e2b0716e-9f89-4545-8b9c-4351d5dbfbda.mp4)
 
 ### Sign-up page
 
